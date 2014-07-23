@@ -1,0 +1,28 @@
+<h1>Listing pizzas</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Size</th>
+    <th>Number of toppings</th>
+    <th>Order placed?</th>
+  </tr>
+
+<% @pizzas.each do |pizza| %>
+  <tr>
+    <td><%=h pizza.name %></td>
+    <td><%=h pizza.size %></td>
+    <td><%= pizza.toppings.size %></td>
+    <td><%= pizza.ordered? %>
+    <td><%= link_to 'Show', pizza %></td>
+    <% unless pizza.ordered? %>
+      <td><%= link_to 'Edit', edit_pizza_path(pizza) %></td>
+      <td><%= link_to 'Remove', pizza, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Place another order', new_pizza_path %>

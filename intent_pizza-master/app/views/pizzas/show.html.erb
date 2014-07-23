@@ -1,0 +1,40 @@
+<p>
+  <b>Name:</b>
+  <%=h @pizza.name %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%=h @pizza.size %>
+</p>
+
+<p>
+  <b>Toppings:</b>
+</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Double order</th>
+  </tr>
+
+<% @pizza.toppings.each do |topping| %>
+  <tr>
+    <td><%=h topping.name %></td>
+    <td><%=h topping.double_order %></td>
+    <% unless @pizza.ordered? %>
+      <td><%= link_to 'Remove', pizza_topping_path(@pizza, topping), :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<% unless @pizza.ordered? %>
+  <p>
+    <%= link_to 'Add toppings', new_pizza_topping_path(@pizza)%> || <%= link_to 'Order this pizza', order_pizza_path %>
+  </p>
+<% end %>
+
+<p>
+  <%= link_to 'All orders', pizzas_path %>
+</p>

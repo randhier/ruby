@@ -1,0 +1,14 @@
+<p>
+  <b>Login:</b>
+  <%=h @user.email %>
+</p>
+
+<p>
+  <%= link_to 'Order a pizza', new_pizza_path %>
+</p>
+ 
+<p>
+  <%= link_to 'Show ordered pizzas', pizzas_path %>
+</p>
+ 
+<%= link_to 'Edit', edit_account_path %>

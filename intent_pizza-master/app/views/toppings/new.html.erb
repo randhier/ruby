@@ -1,0 +1,17 @@
+<h1>New topping</h1>
+
+<%= form_for(@topping, :url => pizza_toppings_path(@pizza)) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :double_order %><br />
+    <%= f.check_box :double_order %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
