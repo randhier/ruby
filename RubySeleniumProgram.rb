@@ -9,3 +9,4 @@ driver.navigate.to "http://GOOGLE.COM"
 #Clicking on the Follow link present on the assertselenium home page
 FollowButton  = driver.find_element(:link, "About")
 FollowButton.click
+#end
