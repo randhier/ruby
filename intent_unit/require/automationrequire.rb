@@ -1,11 +1,12 @@
 require "selenium-webdriver"
-#require "test/unit"
+require "json"
+require "time"
+require "test/unit"
 #include Test::Unit::Assertions
 
 #Constants that can be changed later if url and individual pages are changed.
 BROWSER = 'firefox'
-#URL_HOME = 'http://localhost:3000/'
-URL_HOME = 'http://intent-pizza.internal.intentmedia.net:8080/'
+URL_HOME = 'http://localhost:3000/'
 LOGIN_PAGE = 'sessions'
 LOGIN_URL = URL_HOME + LOGIN_PAGE
 NEW_PAGE = 'users/new'
