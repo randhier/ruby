@@ -1,7 +1,7 @@
 require "selenium-webdriver"
 require "json"
 require "time"
-require "test/unit"
+#require "test/unit"
 #include Test::Unit::Assertions
 
 #Constants that can be changed later if url and individual pages are changed.
@@ -72,6 +72,9 @@ def matchTitle(cssh, title, driver)
 	else
 		loggEr("Error: \"#{title}\" title does not appear, the current title is \"#{elementtext}\"")
 	end
+rescue Exception
+	loggEr ("Error: \"#{title}\" title does not appear, due to the following error")
+	loggEr ("Error: #{$!}")
 end
 
 #Function to match pizza name or size

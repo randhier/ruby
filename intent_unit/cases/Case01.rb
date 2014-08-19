@@ -1,6 +1,6 @@
 #Case01.rb
 $:.unshift File.dirname(__FILE__)
-require 'automationrequire'
+require './require/automationrequire'
 loggEr("==Case01: Verifies the login page's Title, Labels and New user button==")
 
 #Firefox browser instantiation

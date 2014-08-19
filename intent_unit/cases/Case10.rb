@@ -1,6 +1,7 @@
 # Case10.rb
 $:.unshift File.dirname(__FILE__)
-require 'automationrequire'
+require './require/automationrequire'
+
 
 #Function to go home page and click new user, it gets called twice in this script so I made it a function
 def homeandnewuser(driver)

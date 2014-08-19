@@ -1,6 +1,6 @@
 # Case11.rb
 $:.unshift File.dirname(__FILE__)
-require 'automationrequire'
+require './require/automationrequire'
 
 loggEr("==Case11: Login with existing user==")
 
