@@ -1,6 +1,7 @@
 require "test/unit"
 require "selenium-webdriver"
 require "json"
+require './require/automationrequire'
 #require "time"
 
 module Suber

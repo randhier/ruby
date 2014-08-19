@@ -15,7 +15,7 @@ driver.get(URL_HOME)
 matchTitle("h1", "Login", driver)
 
 #Match lables
-matchLabelText("new_user_session", "Email", 1, driver)
+matchLabelText("new_user_session", "Email", 11, driver)
 matchLabelText("new_user_session", "Password", 2, driver)
 
 #Checks for the Login button

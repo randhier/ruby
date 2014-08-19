@@ -9,7 +9,7 @@ failedAr = Array[]
 #						  'Case08', 'Case09', 'Case10', 'Case11', 'Case12', 'Case13', 'Case14',
 #							'Case15', 'Case16', 'Case17', 'Case18', 'Case19', 'Case20', 'Case21',
 #							'Case22', 'Case23', 'Case24', 'Case25', 'Case26']
-cases = Array['Case01', 'Case10', 'Case11']
+cases = Array['Case01', 'Case10']
 
 loggEr("**Test script execution started on #{Time.new.strftime("%Y-%m-%d %H:%M:%S")}.  Will attempt to run #{cases.length} test cases**\n")
 #Loops array and checkes if the file exists, if not it will skip and report that the file is missing.
@@ -19,6 +19,7 @@ caseFile = "#{x}.rb"
 if File.exists?("./cases/#{caseFile}")
 	loggEr("=Running test #{caseFile}=")
 	#system("ruby #{caseFile}")
+	errCode = 0;
 	begin
 	#load "./cases/#{caseFile}"
 	system ("ruby ./cases/#{caseFile}")
