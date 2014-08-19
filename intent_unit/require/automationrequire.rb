@@ -110,6 +110,9 @@ def matchPizzaLabelText(formid, textla, labelnum, driver)
 	else
 		loggEr("Error: Label \"#{textla }\" does not appears")
 	end
+rescue Exception
+			loggEr ("Error: Label \"#{textla }\" does not appears, due to the following error")
+			loggEr ("Error: #{$!}")
 end
 
 
